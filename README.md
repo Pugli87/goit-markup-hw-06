@@ -1,64 +1,52 @@
-# goit-markup-hw-05
-Tarea 5
+# goit-markup-hw-06
+Tarea 6
 
-
--    Cree el repositorio goit-markup-hw-05.  ----------> OK
--    Clone el repositorio creado y copie los archivos de trabajo anteriores en él.  ----------> OK
--   Agregue efectos decorativos animados a las páginas de diseño de la tarea de casa #5.  ----------> OK
--   Configure las GitHub Pages y agregue un enlace a la página en vivo en el encabezado del repositorio de GitHub.  ----------> OK
--   Los criterios de aceptación de trabajo por parte del tutor  ----------> OK
-
+Cree el repositorio goit-markup-hw-06.
+Clone el repositorio creado y copie los archivos de trabajo anteriores en él.
+Realice el marcado y el diseño de la página para la tarea de casa #6:
+Configure las GitHub Pages y agregue un enlace a la página en vivo en el encabezado del repositorio de GitHub.
+Los criterios de aceptación de trabajo por parte del tutor
 El proyecto
+«A1» Todos los estilos están contenidos en un archivo styles.css, que se encuentra en la carpetacss.
 
-«A1» Todos los estilos están contenidos en un archivo styles.css, que se encuentra en la carpetacss.  ----------> OK
+«A2» El código fuente está formateado con Prettier.
 
-«A2» El código fuente está formateado con Prettier. «A3» Todas las imágenes y el contenido del texto se toman del diseño.  ----------> OK
+«A3» Todas las imágenes y el contenido del texto se toman del diseño.
 
-«A4» Todas las páginas HTML tienen un normalizador de estilo modern-normalize.  ----------> OK
+«A4» Todas las páginas HTML tienen un normalizador de estilo modern-normalize.
 
-«A5» El código está escrito siguiendo. la guía.  ----------> OK
-
-«A6» El script de ventana modal está vinculado en HTML como un archivo separado llamado modal.js.   ----------> OK
-
-
+«A5» El código está escrito siguiendo la guía.
 
 El marcado
+«B1» El marcado HTML se realiza para todos los elementos de diseño.
 
-«B1» El marcado HTML se realiza para todos los elementos de diseño. «B2» Las etiquetas se utilizan según su semántica.  ----------> OK
+«B2» Las etiquetas se utilizan según su semántica.
 
+«B3» Se realiza el marcado del formulario de suscripción al boletín y todos sus elementos en el pie de página.
 
+«B4» Se realiza el marcado del formulario de pedido y todos sus elementos en la ventana modal.
+
+«B5» Todas las entradas en los formularios tienen el atributo name.
+
+«B6» Los valores del atributo de name son descriptivos y describen exactamente para qué se utiliza el campo de formulario.
+
+«B7» Todas las entradas tienen un elemento <label> enlazado.
+
+«B8» La entrada se establece en el atributo placeholder si hay un texto de sugerencia para él en el diseño.
+
+«B9» Los botones de envío de formularios tienen el atributo type="submit" establecido.
+
+«B10» Todos los nuevos íconos de formulario se agregan al sprite SVG icons.svg.
 
 El diseño
+«C1» Se realiza el diseño de los elementos del formulario de suscripción al boletín en el pie de página.
 
+«C2» Se realiza el diseño de los elementos del formulario de pedido en la ventana modal.
 
-«C1» Para todos los efectos de desplazamiento y enfoque (color, fondo, sombra), se realizan transiciones. Tiempo - 250ms, la función de distribución de tiempo - cubic-bezier(0.4, 0,    0.2, 1).
+«C3» Cuando una entrada está enfocada, su borde y su ícono cambian de color (como se muestra en el diseño).
 
-«C2» Las propiedades animadas se especifican explícitamente en transiciones y animaciones. No hay ningún valor de all en ninguna parte.
+«C4» La casilla de verificación original con la aceptación del acuerdo de licencia en el formulario de pedido está oculta.
 
-«C3» En la sección Qué hacemos el texto con fondo se coloca sobre la imagen.
+«C5» La casilla de verificación con la aceptación del acuerdo de licencia se diseña manualmente, utilizando una imagen de marca de verificación vectorial del sprite SVG.
 
-«C4» En la navegación principal, el enlace de la página actual (que el usuario está viendo actualmente) está subrayado usando el pseudo-elemento ::after.
-
-«C5» Aparece una superposición azul con texto en las tarjetas de la página Portafolio al pasar el cursor sobre cualquier parte de la tarjeta.
-
-«C6» La superposición azul se desliza desde la parte inferior de las tarjetas en la página de Portafolio como se muestra en el video.
-
-card overlay preview
-«C7» Los pseudo-elementos no tienen contenido de texto en la propiedad content. Se utilizan exclusivamente con fines decorativos.
-
-Ventana modal
-«D1» Se realizan el marcado y diseño de «backdrop» (fondo semitransparente oscuro) de la ventana modal.
-
-«D2» «Backdrop» ocupa el 100% de la altura y el ancho de la ventana del navegador y permanece fijo en él.
-
-«D3» El marcado y el diseño de la ventana modal están hechos.
-
-«D4» La ventana modal se coloca vertical y horizontalmente en el medio del backdrop.
-
-«D5» El marcado y el diseño del botón para cerrar la ventana modal en la esquina superior derecha están listos.
-
-«D6» Inicialmente, la ventana modal y el backdrop están ocultos con la ayuda de la clase is-hidden en el backdrop cuyo selector utiliza propiedades visibility, opacity y pointer-events.
-
-«D7» Si eliminar la clase is-hidden del backdrop, aparecerá el backdrop y la ventana modal.
-
-«D8» La aparición y desaparición de la ventana modal se anima mediante una transición con un efecto arbitrario, por ejemplo scale o translate, y opacity.
+«C6» Para todos los efectos de desplazamiento y enfoque (color, fondo, sombra), se realizan transiciones. Tiempo - 250ms, la función de distribución de tiempo - cubic-bezier(0.4, 0, 0.2, 1).
