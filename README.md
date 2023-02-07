@@ -62,3 +62,29 @@ Ventana modal
 «D7» Si eliminar la clase is-hidden del backdrop, aparecerá el backdrop y la ventana modal.
 
 «D8» La aparición y desaparición de la ventana modal se anima mediante una transición con un efecto arbitrario, por ejemplo scale o translate, y opacity.
+
+_____________________________________________________________________________________________________________________________________________________________________________________
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_____________________________________________________________________________________________________________________________________________________________________________________
+
+
+Te recomiendo encarecidamente que revises tu trabajo y lo corrijas si no lo has entregado todavía. O que le des otra ojeada simplemente.
+
+-   El formulario que se encuentra en el pie de página. Fíjate en la manera que que está situado ahí, está pegado al borde derecho del contenedor.
+
+-   El posicionamiento de los iconos en input. Es por lo general este tipo de construcción: un div común, en el que se encuentra label, input и un icono svg. 
+
+-   El ícono se posiciona con  absolute, en relación a su parental div. Input - es el elemento contiguo al icono. 
+    También sería erróneo (inútil) indicar al input position: relative. Se puede intuir el posicionamiento hasta que sea parecido visualmente, 
+    pero eso tampoco será técnicamente correcto.
+
+-   Para colocar el icono correctamente, hay varias opciones, pero la más fácil y sencilla para usted es input y poner el icono svg en div. 
+    A este contenedor hay que asignarle position:relative. 
+    svg- position:absolute. Y entonces habrá un posicionamiento de iconos claro y competente, 
+    esto debido a que absolute viene del flujo del documento, y div tomó las medidas de input
+
+-   En caso de posicionamiento absoluto, no olvide que se necesitan dos puntos. Por ejemplo: top y left. Aún cuando visualmente no cambie nada.
+
+-   Cuando ponga por ejemplo top:50% no olvides que no es exactamente el centro deseado. Para que éste sea realmente el deseado, añada transform: translateY(-50%);
+
+-   No olvides hacer focus en la casilla personalizada.

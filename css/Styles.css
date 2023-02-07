@@ -76,13 +76,12 @@ img{
 /* ------------------------------------------------------------- */
 
 .backdrop{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     position: fixed; 
-    justify-content: center;
-    align-items: center;
     visibility: visible;
+    opacity: 1;
     background-color: rgb(0, 0, 0, 0.2);
     z-index: 1;
 }
@@ -90,7 +89,7 @@ img{
 .is-hidden{
     visibility:hidden;
     opacity: 0;
-    pointer-events: 0;
+    pointer-events: none;
 }
 
 .modal{
@@ -98,7 +97,7 @@ img{
     top: 50%;
     left: 50%;
     display: flex;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
 
     WIdth: 528px;
     height: 581px;
@@ -107,28 +106,127 @@ img{
     border-radius: 4px;
     transform: translate(-50%,-50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    position: relative}
 
 /* -----------transition o animacion----------- */
 
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(0.5);
 }
+
 /* -------------------------------------------- */
 
-.modal button{
+.form-modal{
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.title-modal{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+}
+
+
+
+.cont-form-modal{
+    width: 448px;
+    height: 58px;
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+.form-info{
+    width: 44px;
+    height: 14px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: #757575;
+}
+
+.form-input{
+    background-color: #757575;
+    margin-top: 4px;
+    padding: 0;
+    padding-left: 42px;
+    width: 448px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;    
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #757575;
+}
+
+.form-input-icon-container{   
+    position: relative; 
+    width: 42px;
+    height: 40px;
+    background-color: #2196F3;
+    transform: translateY(-99.5%);
+}
+
+.form-input-icon{
+    position: absolute;
+    left: 15px;
+    top: 14px;
+}
+
+
+
+.Button-form{
+    width: 200px;
+    height: 50px;
+    border: none;
+    text-transform: capitalize;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.1;
+    left: 164px;
+    bottom: 40px;
+    letter-spacing: 0.06em;
+
+    color: #FFFFFF;
+}
+
+/* cierre del modal */
+
+.button-modal{
+    position: absolute;
+    top: 6.5px;
+    right: 8px;
+    cursor: pointer;
     margin-top: 8px;
     margin-right: 8px;
-    padding: 8px;
+    padding: 6px; 
     width: 30px;
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color:white;
     border-radius: 50%;
+    fill: var(--body-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
-.icon-close{
-    fill: var(--body-color);
+.modal button:hover, .modal button:focus{
+    fill: var(--hover-color);
+    outline: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 
@@ -140,6 +238,10 @@ img{
 
 
 .logo{
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+
     color: var(--hover-color);
     font-family: 'Raleway';
     font-style: normal;
@@ -200,12 +302,6 @@ a:hover, a:focus{
 
 .cab{
     border-bottom: 1px solid #ECECEC;
-}
-
-.logo{
-    padding-top: 24px;
-    padding-bottom: 25px;
-    margin-right: 93px;
 }
 
 .cab .menu, .menu-list, .cab .contact-list{
@@ -542,20 +638,47 @@ a:hover, a:focus{
     border: 1px solid var(--hover-color);
     fill: var(--hover-color);
 }
+/* ------------------------------------------------------------------------------ */
+/* ---------------------------------- Footer ------------------------------------ */
+/* ------------------------------------------------------------------------------ */
 
-/* ------------------------------------------------------ */
-/* ---------------------- Footer ------------------------ */
-/* ------------------------------------------------------ */
-
+/* contenedor principal footer */
 
 .footer-contact{
     background-color: var(--background-2);
+}
+
+/* contenedor de contacto */
+
+.footer-cont{
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* informacion de contacto */
+
+.cont-contact{
+    margin-right: 70px ;
+}
+
+.logo-footer{
+    display: flex;
+    margin-bottom: 6px;
+    color: var(--hover-color);
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    text-align: right;
     letter-spacing: 0.03em;
 }
 
 .footer-contact-list{
+    width: 231px;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.5;
     letter-spacing: 0.03em;
 }
 
@@ -565,9 +688,10 @@ a:hover, a:focus{
 }
 
 .footer-contact-list-item{
+    display: flex;
+    margin-bottom: 9px;
     color: var(--gray-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .footer-contact-list-item:hover, .footer-contact-list.item:focus{
@@ -575,44 +699,12 @@ a:hover, a:focus{
     fill: var(--hover-color);
 }
 
-
-/* ------------------------------------------------------ */
-/* ----------------------> Flexbox <--------------------- */
-/* ------------------------------------------------------ */
-
-.footer-contact{
-    display: flex;
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
-.cont-contact{
-    margin-left: 215px;
-    margin-right: 0;
-    width: 231px;
-}
-
-.cont-contact>.logo{
-    padding: 0;
-    width: 145px;
-    display: flex;
-    margin-bottom: 9px;
-}
-
-.footer-contact-list{
-    width: 231px;
-    display: flex;
-    flex-direction: column;
-}
-
-.footer-contact-list .link{
-    margin-bottom: 9px;
-}
-
 /* --------------- Redes sociales --------------- */
 
 .cont-social{
-    margin-left: 70px;
+    flex-direction: column;
+    width: 206px;
+    margin-right: 90px;
 }
 
 .title-footer{
@@ -626,17 +718,16 @@ a:hover, a:focus{
     color: #FFFFFF;
 }
 
-/* ----------------- estilos svg ----------------- */
 .icon-nav{
     margin-top: 16px;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    row-gap: 10px;
 }
 
 .icon-footer{
     display: flex;
-    flex-basis: calc(( 100% - 30px )/4);
+    flex-basis: calc(( 100%-30px )/4);
 }
 
 .footer-media{
@@ -656,9 +747,90 @@ a:hover, a:focus{
 }
 
 
-/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------------- Portafolio ----------------------------------------------------------------------------------- */
-/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Formulario footer */
+
+.form-email{
+    flex-direction: column;
+}
+
+.cont-form{
+    display: flex;
+    width: 570px;
+    height: 86px;
+}
+
+.form-email label{
+    color: var(--background-color);
+    width: 358px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-right: 12px;
+}
+
+.form-email input{
+    margin-top: 20px ;
+    background-color: var(--background-2);
+    width: 358px;
+    height: 50px;
+    padding-left: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.6); 
+    transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-email input:hover, .form-email input:focus{
+    outline: 1px solid var(--hover-color);
+}
+
+.footer-button{  
+    display: flex; 
+    position: relative;
+    width: 200px;
+    height: 50px;    
+    margin-top: 36px;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.footer-button:hover, .footer-button:focus{
+    outline: 1px solid var(--hover-color);
+}
+
+
+.footer-button span{
+    position: absolute;
+    left: 39px;
+    top: 10px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    text-transform: capitalize;
+
+    color: #FFFFFF;
+}
+
+.form-email svg {
+    position: absolute;
+    left: 148px;
+    top: 13px;
+}
+
+
+/* ----------------------------------------------------------------------------- */
+/* -------------------------------- Portafolio --------------------------------- */
+/* ----------------------------------------------------------------------------- */
 
 
 .briefcase-list-button{
@@ -699,7 +871,6 @@ a:hover, a:focus{
     line-height: 2;
     letter-spacing: 0.06em;
     text-align: left;
-    color: var(--body-color);
 }
 
 .briefcase-list-text{
@@ -714,7 +885,6 @@ a:hover, a:focus{
 /* ------------------------------------------------------ */
 /* ----------------------> Flexbox <--------------------- */
 /* ------------------------------------------------------ */
-
 
 .briefcase-list{
     display: flex;
