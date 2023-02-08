@@ -203,9 +203,14 @@ img{
     left: 15px;
     top: 50%;
     transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 18px;
     height: 18px;
+    fill: #212121;
 }
+
 
 .textarea{
     margin-top: 4px;
