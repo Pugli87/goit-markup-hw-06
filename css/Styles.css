@@ -93,6 +93,7 @@ img{
 }
 
 .modal{
+    padding: 40px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -112,96 +113,6 @@ img{
 
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(0.5);
-}
-
-/* -------------------------------------------- */
-
-.form-modal{
-    width: 100%;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 10px;
-}
-
-.title-modal{
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    margin-bottom: 12px;
-}
-
-
-
-.cont-form-modal{
-    width: 448px;
-    height: 58px;
-    /* display: flex; */
-    /* flex-direction: column; */
-}
-
-.form-info{
-    width: 44px;
-    height: 14px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.01em;
-    color: #757575;
-}
-
-.form-input{
-    background-color: #757575;
-    margin-top: 4px;
-    padding: 0;
-    padding-left: 42px;
-    width: 448px;
-    height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;    
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    color: #757575;
-}
-
-.form-input-icon-container{   
-    position: relative; 
-    width: 42px;
-    height: 40px;
-    background-color: #2196F3;
-    transform: translateY(-99.5%);
-}
-
-.form-input-icon{
-    position: absolute;
-    left: 15px;
-    top: 14px;
-}
-
-
-
-.Button-form{
-    width: 200px;
-    height: 50px;
-    border: none;
-    text-transform: capitalize;
-    background: #2196F3;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.1;
-    left: 164px;
-    bottom: 40px;
-    letter-spacing: 0.06em;
-
-    color: #FFFFFF;
 }
 
 /* cierre del modal */
@@ -224,11 +135,131 @@ img{
 
 }
 
-.modal button:hover, .modal button:focus{
-    fill: var(--hover-color);
-    outline: 1px solid rgba(0, 0, 0, 0.1);
+
+
+
+.title-form{
+    width: 100%;
+    height: 23px;
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: #212121;
+}
+.modal-form label{
+
+    width: 44px;
+    height: 14px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+
+    color: #757575;
 }
 
+.input-cont{
+    position: relative;
+
+}
+.input-form{
+    margin-top: 4px;
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-left: 42px;
+    width: 100%;
+    
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    fill: var(--body-color);
+}
+
+.svg-cont{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 18px;
+    height: 18px;
+}
+
+.textarea{
+    margin-top: 4px;
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.checkbox-cont{
+    width: 423px;
+    margin-top: 20px;
+    margin-left: 14px;
+    position: relative;
+}
+
+.input-checkbox{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.p-checkbox{
+    width: 400px;
+    height: 24px;    
+    margin-right: 11px;
+    margin-bottom: 30px;
+    margin-left: 23px;
+
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+
+    letter-spacing: 0.03em;
+
+    color: #757575;
+}
+
+
+.button-form{
+    width: 200px;
+    height: 50px;
+
+    margin-left: 125px;
+
+    background: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    border: none;
+    color: var(--background-color);
+    text-transform: capitalize;
+}
 
 
 

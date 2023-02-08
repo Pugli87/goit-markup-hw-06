@@ -22,29 +22,63 @@
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        
-        <form class="form-modal" name="Datos clientes" autocomplete="off" novalidate>
-          <h2 class="title-modal">Deje sus datos, nos contactaremos con usted</h2>
-          <div class="cont-form-modal">
-            <label class="form-info" for="name">Nombre</label>       
-            <input class="form-input" type="name" name="Nombre"/>        
-              <div class="form-input-icon-container">
-                <svg class="form-input-icon" width="12px" height="12px">
-                  <use href="./imagenes/icon.svg#icon-persona-negra"></use>
-                </svg>
-              </div>                   
-          </div>
-
-          <!-- Boton de envio formulario -->
-          <button class="Button-form" type="submit">enviar</button>
-        </form>    
-        
         <!-- Boton de cierre modal -->
         <button data-modal-close class="button-modal">
           <svg width="17px" height="17px">
             <use href="./imagenes/icon.svg#icon-close"></use>
           </svg>
         </button>
+        
+        <form class="modal-form" name="informacion-del-cliente" autocomplete="off" novalidate>
+          <h2 class="title-form">Deje sus datos, nos contactaremos con usted</h2>
+          <label> nombre
+            <div class="input-cont">
+              <input class="input-form" type="text" name="nombre" autofocus>
+              <div class="svg-cont">
+                <svg  width="12" height="12">
+                  <use href="/imagenes/icon.svg#person-black"></use>
+                </svg>
+              </div>
+            </div>
+          </label> 
+
+          <label> telefono
+            <div class="input-cont">
+              <input class="input-form" type="text" name="telefono" autofocus>
+              <div class="svg-cont">
+                <svg  width="13" height="13">
+                  <use href="/imagenes/icon.svg#telefono-negro"></use>
+                </svg>
+              </div>
+            </div>
+          </label>
+
+          <label> e-mail
+            <div class="input-cont">
+              <input class="input-form" type="text" name="e-mail" autofocus>
+              <div class="svg-cont">
+                <svg  width="15" height="12">
+                  <use href="/imagenes/icon.svg#icon-correo"></use>
+                </svg>
+              </div>
+            </div>
+          </label>
+
+          <label>comentarios
+              <textarea class="textarea" name="comentarios" placeholder="introduzca el texto"></textarea>
+          </label>
+
+          <label>
+            <div class="checkbox-cont">
+              <p class="p-checkbox">Estoy de acuerdo con el boletín informativo y acepto los Términos y Condiciones</p>
+              <input class="input-checkbox" type="checkbox" name="condiciones">
+            </div>
+          </label>
+
+
+
+          <button class="button-form" type="submit">enviar</button>
+        </form>
       </div>
     </div>
 
