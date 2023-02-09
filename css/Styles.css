@@ -136,6 +136,7 @@ img{
 }
 .button-modal:hover, .button-modal:focus{
     fill: var(--hover-color);
+    outline: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos del formulario */
@@ -191,9 +192,9 @@ img{
 }
 
 
-/* :focus-visible{
+:focus-visible{
     outline: 1px solid var(--hover-color);
-} */
+}
 
 .input-form:hover{
     border: 1px solid var(--hover-color);
