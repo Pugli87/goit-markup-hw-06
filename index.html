@@ -30,7 +30,7 @@
         </button>
         
         <form class="modal-form" name="informacion-del-cliente" autocomplete="off" novalidate>
-          <h2 class="title-form">Deje sus datos, nos contactaremos con usted</h2>
+          <p class="title-form">Deje sus datos, nos contactaremos con usted</p>
           
           <label> nombre
             <div class="input-cont">
@@ -69,12 +69,22 @@
               <textarea class="textarea" name="comentarios" placeholder="introduzca el texto"></textarea>
           </label>
 
-          <label>
-            <div class="checkbox-cont">
-              <p class="p-checkbox">Estoy de acuerdo con el boletín informativo y acepto los Términos y Condiciones</p>
+          <div class="checkbox-cont">
+            <label>
               <input class="input-checkbox" type="checkbox" name="condiciones">
-            </div>
-          </label>
+
+              <span class="span-svg">
+                <svg  width="16" height="15">
+                  <use href="./imagenes/icon.svg#checkbox-svg"></use>
+                </svg>
+              </span>
+
+              <span class="span-tex">
+                <p>Estoy de acuerdo con el boletín informativo y acepto los Términos y Condiciones</p>
+              </span>
+              
+            </label>
+          </div>
 
 
 
