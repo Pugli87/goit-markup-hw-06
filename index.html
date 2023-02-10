@@ -24,70 +24,71 @@
       <div class="modal">
         <!-- Boton de cierre modal -->
         <button data-modal-close class="button-modal">
+          <span hidden>close</span>
           <svg width="17px" height="17px">
             <use href="./imagenes/icon.svg#icon-close"></use>
           </svg>
         </button>
         
-        <form class="modal-form" name="informacion-del-cliente" autocomplete="off" novalidate>
-          <p class="title-form">Deje sus datos, nos contactaremos con usted</p>
+        <form class="modal-form" name="informacion-del-cliente" autocomplete="off" novalidate >
+          <div role="group" aria-labelledby="contact-details-head"> 
+            <p class="title-form" id="contact-details-head">Deje sus datos, nos contactaremos con usted</p>
           
-          <label> nombre
-            <div class="input-cont">
-              <input class="input-form" type="text" name="nombre" autofocus>
-              <div class="svg-cont">
-                <svg  width="12" height="12" >
-                  <use href="./imagenes/icon.svg#person-black"></use>
-                </svg>
+            <label> nombre
+              <div class="input-cont">
+                <input class="input-form" type="text" name="nombre" required>
+                <div class="svg-cont">
+                  <svg  width="12" height="12" >
+                    <use href="./imagenes/icon.svg#person-black"></use>
+                  </svg>
+                </div>
               </div>
-            </div>
-          </label> 
+            </label> 
 
-          <label> telefono
-            <div class="input-cont">
-              <input class="input-form" type="text" name="telefono" autofocus>
-              <div class="svg-cont">
-                <svg  width="13" height="13">
-                  <use href="./imagenes/icon.svg#telefono-negro"></use>
-                </svg>
+            <label> telefono
+              <div class="input-cont">
+                <input class="input-form" type="text" name="telefono" required>
+                <div class="svg-cont">
+                  <svg  width="13" height="13">
+                    <use href="./imagenes/icon.svg#telefono-negro"></use>
+                  </svg>
+                </div>
               </div>
-            </div>
-          </label>
-
-          <label> e-mail
-            <div class="input-cont">
-              <input class="input-form" type="text" name="e-mail" autofocus>
-              <div class="svg-cont">
-                <svg  width="15" height="12">
-                  <use href="./imagenes/icon.svg#icon-correo"></use>
-                </svg>
-              </div>
-            </div>
-          </label>
-
-          <label>comentarios
-              <textarea class="textarea" name="comentarios" placeholder="introduzca el texto"></textarea>
-          </label>
-
-          <div class="checkbox-cont">
-            <label>
-              <input class="input-checkbox" type="checkbox" name="condiciones">
-
-              <span class="span-svg">
-                <svg  width="16" height="15">
-                  <use href="./imagenes/icon.svg#checkbox-svg"></use>
-                </svg>
-              </span>
-
-              <span class="span-tex">
-                <p>Estoy de acuerdo con el boletín informativo y acepto los Términos y Condiciones</p>
-              </span>
-              
             </label>
+
+            <label> e-mail
+              <div class="input-cont">
+                <input class="input-form" type="text" name="e-mail" required autocomplete="off">
+                <div class="svg-cont">
+                  <svg  width="15" height="12">
+                    <use href="./imagenes/icon.svg#icon-correo"></use>
+                  </svg>
+                </div>
+              </div>
+            </label>
+
+            <label>comentarios
+                <textarea class="textarea" name="comentarios" placeholder=" Introduzca el texto" required></textarea>
+            </label>
+
+            <div class="checkbox-cont">
+              <label>
+                <input class="input-checkbox" type="checkbox" name="condiciones" required>
+
+                <span class="span-svg">
+                  <svg  width="16" height="15">
+                    <use href="./imagenes/icon.svg#checkbox-svg"></use>
+                  </svg>
+                </span> 
+
+                <span class="span-text">
+                  <p>Estoy de acuerdo con el boletín informativo y acepto los Términos y Condiciones</p>
+                </span>
+                
+              </label>
+            </div>
+
           </div>
-
-
-
           <button class="button-form" type="submit">enviar</button>
         </form>
       </div>
@@ -133,6 +134,7 @@
 
     <!-- Cuerpo -->
     <main>
+
       <!-- seccion del titulo de la pagina y el button -->
       <section class="section section-title">
         <div class="container"> <!--name.section-->
@@ -140,6 +142,7 @@
           <button data-modal-open type="button" class="button-index">Solicite nuestro servicio</button>
         </div>
       </section>
+
         <!-- seccion de caracteristicas -->
       <section class="section">
         <div class="container">
@@ -212,6 +215,7 @@
           </ul>
         </div>
       </section>
+
       <!-- seccion A que nos dedicamos -->
       <section class="section product">
         <div class="container">
@@ -232,6 +236,7 @@
           </ul>
         </div>
       </section>
+
       <!-- seccion Nuestro equipo -->
       <section class="team section">
         <div class="container">
@@ -399,6 +404,7 @@
           </ul>
         </div>
       </section>
+
       <!-- seccion clientes regulares -->
       <section class="section">
           <div class="container">
@@ -520,10 +526,10 @@
         </div>
         <!-- formulario -->          
         <div class="form-email">
-          <form class="cont-form">
-            <label for="correo">
+          <form name="" class="cont-form">
+            <label>
               suscríbase al boletín informativo
-              <input type="email" name="email" placeholder="Correo electronico"/>
+              <input type="email" name="suscríbase al boletín informativo" placeholder="Correo electronico" required autocomplete="off"/>
             </label>
             <button type="submit" class="footer-button">
               <span> suscríbase </span>                           

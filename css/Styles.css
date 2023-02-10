@@ -205,9 +205,8 @@ img{
     fill: var(--hover-color);
 }
 
-
-
 .svg-cont{
+    
     position: absolute;
     left: 15px;
     top: 50%;
@@ -236,12 +235,14 @@ img{
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.01em;
-
-    color: rgba(117, 117, 117, 0.5);
 }
 
 .textarea:hover{
     border: 1px solid var(--hover-color);
+}
+
+.textarea::placeholder{
+    color: rgba(117, 117, 117, 0.5);
 }
 
 .checkbox-cont{ 
@@ -252,7 +253,8 @@ img{
     position: relative;
 }
 
-.input-checkbox{
+.input-checkbox{    
+    appearance: none;
     position: absolute;
     left: 0;
     top: 50%;
@@ -265,12 +267,24 @@ img{
     top: 50%;
     left: 0%;
     transform: translateY(-50%);
-    display: flex;
     justify-content: center;
     align-items: center;
+    fill: transparent;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--body-color);
+    border-radius: 2px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.span-tex{
+.input-checkbox:checked + .span-svg {
+    border-color: var(--hover-color);
+    background-color: var(--hover-color);
+
+}
+
+.span-text{
     position: absolute;
     width: 400px;
     height: 24px; 
@@ -717,6 +731,7 @@ a:hover, a:focus{
     border: 1px solid var(--hover-color);
     fill: var(--hover-color);
 }
+
 /* ------------------------------------------------------------------------------ */
 /* ---------------------------------- Footer ------------------------------------ */
 /* ------------------------------------------------------------------------------ */
