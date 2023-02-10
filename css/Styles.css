@@ -379,7 +379,6 @@ img{
 }
 
 a:hover, a:focus{
-    /* outline: 1px solid var(--hover-color); */
     color: var(--hover-color);
 }
 
@@ -420,7 +419,6 @@ a:hover, a:focus{
 }
 
 .contact-list-link:hover,   .contact-list-link:focus{
-    /* outline: 1px solid var(--hover-color); */
     color: var(--hover-color);
     fill: var(--hover-color);
 }
