@@ -76,10 +76,12 @@ img{
 /* ------------------------------------------------------------- */
 
 .backdrop{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     position: fixed; 
+    justify-content: center;
+    align-items: center;
     visibility: visible;
     opacity: 1;
     background-color: rgb(0, 0, 0, 0.2);
@@ -93,23 +95,18 @@ img{
 }
 
 .modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
     display: flex;   
     WIdth: 528px;
     height: 581px;
     padding: 40px;
-    /* position: absolute; */
-    top: 50%;
-    left: 50%;
-    
-    /* justify-content: flex-end; */
-
-
     background-color: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transform: translate(-50%,-50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative
 }
 
 .backdrop.is-hidden .modal {
@@ -140,6 +137,14 @@ img{
 }
 
 /* Estilos del formulario */
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.group-form{
+    margin-bottom: 10px;
+}
 
 .title-form{
     width: 100%;
@@ -155,10 +160,9 @@ img{
     color: #212121;
 }
 
-.modal-form label{
-
-    width: 44px;
-    height: 14px;
+.modal-form{
+    display: flex;
+    flex-direction: column;
 
     font-weight: 400;
     font-size: 12px;
@@ -166,18 +170,17 @@ img{
     letter-spacing: 0.01em;
     text-transform: capitalize;
 
-    color: #757575;
+    color: #757575;  
+    margin-bottom: 10px;  
 }
 
 .input-cont{
     position: relative;
     margin-top: 4px;
-    margin-bottom: 10px;
 }
 
 .input-form{
     border: 1px solid var(--gray-color);
-    
     
     padding-top: 12px;
     padding-right: 12px;
@@ -206,7 +209,6 @@ img{
 }
 
 .svg-cont{
-    
     position: absolute;
     left: 15px;
     top: 50%;
@@ -246,11 +248,13 @@ img{
 }
 
 .checkbox-cont{ 
-    width: 423px;
-    height: 24px;
-    margin-top: 20px;
-    margin-left: 14px;
     position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.label-a{
+    display: flex;
 }
 
 .input-checkbox{    
@@ -258,13 +262,12 @@ img{
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translateY(-50%);
 }
 
 .span-svg{
     position: absolute;
     display: flex;
-    top: 50%;
+    top: 27%;
     left: 0%;
     transform: translateY(-50%);
     justify-content: center;
@@ -284,14 +287,7 @@ img{
 
 }
 
-.span-text{
-    position: absolute;
-    width: 400px;
-    height: 24px; 
-    left: 26px;   
-
-    font-family: 'Roboto';
-    font-style: normal;
+.span-text{  
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
@@ -299,15 +295,19 @@ img{
     letter-spacing: 0.03em;
 
     color: #757575;
+    padding-left: 24px;
+    text-align: left;
 }
 
 
 .button-form{
+    display: flex;
     width: 200px;
     height: 50px;
 
-    margin-left: 125px;
-    margin-top: 30px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 
     font-weight: 700;
     font-size: 16px;

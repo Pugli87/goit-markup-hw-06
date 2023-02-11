@@ -29,66 +29,83 @@
             <use href="./imagenes/icon.svg#icon-close"></use>
           </svg>
         </button>
-        
-        <form class="modal-form" name="informacion-del-cliente" autocomplete="off" novalidate >
-          <div role="group" aria-labelledby="contact-details-head"> 
-            <p class="title-form" id="contact-details-head">Deje sus datos, nos contactaremos con usted</p>
+
+        <form 
+          class="form" 
+          name="informacion-del-cliente" 
+          autocomplete="off" 
+          novalidate 
+        >
+        <div role="group" aria-labelledby="contact-details-head" class="group-form">  
+          <p class="title-form" id="contact-details-head">
+            Deje sus datos, nos contactaremos con usted
+          </p>
           
-            <label> nombre
-              <div class="input-cont">
-                <input class="input-form" type="text" name="nombre" required>
-                <div class="svg-cont">
-                  <svg  width="12" height="12" >
-                    <use href="./imagenes/icon.svg#person-black"></use>
-                  </svg>
-                </div>
+          <label class="modal-form"> 
+            nombre
+            <div class="input-cont">
+              <input class="input-form" type="text" name="nombre" required>
+              <div class="svg-cont">
+                <svg  width="12" height="12" >
+                  <use href="./imagenes/icon.svg#person-black"></use>
+                </svg>
               </div>
-            </label> 
-
-            <label> telefono
-              <div class="input-cont">
-                <input class="input-form" type="text" name="telefono" required>
-                <div class="svg-cont">
-                  <svg  width="13" height="13">
-                    <use href="./imagenes/icon.svg#telefono-negro"></use>
-                  </svg>
-                </div>
-              </div>
-            </label>
-
-            <label> e-mail
-              <div class="input-cont">
-                <input class="input-form" type="text" name="e-mail" required autocomplete="off">
-                <div class="svg-cont">
-                  <svg  width="15" height="12">
-                    <use href="./imagenes/icon.svg#icon-correo"></use>
-                  </svg>
-                </div>
-              </div>
-            </label>
-
-            <label>comentarios
-                <textarea class="textarea" name="comentarios" placeholder=" Introduzca el texto" required></textarea>
-            </label>
-
-            <div class="checkbox-cont">
-              <label>
-                <input class="input-checkbox" type="checkbox" name="condiciones" required>
-
-                <span class="span-svg">
-                  <svg  width="16" height="15">
-                    <use href="./imagenes/icon.svg#checkbox-svg"></use>
-                  </svg>
-                </span> 
-
-                <span class="span-text">
-                  <p>Estoy de acuerdo con el boletín informativo y acepto los Términos y Condiciones</p>
-                </span>
-                
-              </label>
             </div>
+          </label> 
 
+          <label class="modal-form"> telefono
+            <div class="input-cont">
+              <input class="input-form" type="text" name="telefono" required>
+              <div class="svg-cont">
+                <svg  width="13" height="13">
+                  <use href="./imagenes/icon.svg#telefono-negro"></use>
+                </svg>
+              </div>
+            </div>
+          </label>
+
+          <label class="modal-form"> e-mail
+            <div class="input-cont">
+              <input 
+                class="input-form" 
+                type="text" 
+                name="e-mail" 
+                required autocomplete="off"
+              >
+              <div class="svg-cont">
+                <svg  width="15" height="12">
+                  <use href="./imagenes/icon.svg#icon-correo"></use>
+                </svg>
+              </div>
+            </div>
+          </label>
+
+          <label class="modal-form">
+            comentarios
+            <textarea 
+              class="textarea" 
+              name="comentarios" 
+              placeholder=" Introduzca el texto" 
+              required>
+            </textarea>
+          </label>
+        </div>
+          <div class="checkbox-cont">
+            <label class="label-a">
+              <input class="input-checkbox" type="checkbox" name="condiciones" required>
+
+              <span class="span-svg">
+                <svg  width="16" height="15">
+                  <use href="./imagenes/icon.svg#checkbox-svg"></use>
+                </svg>
+              </span>
+              <span class="span-text">
+                Estoy de acuerdo con el boletín informativo y acepto los Términos y Condiciones
+              </span>
+            </label>
           </div>
+              
+            
           <button class="button-form" type="submit">enviar</button>
         </form>
       </div>
